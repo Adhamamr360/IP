@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Ain Shams University - Login</title>
+  </head>
+  <body>
+    <header>
+      <img src="Images/asueng.jpeg" alt="Ain Shams University Logo" class="logo" />
+      <h1>Ain Shams University</h1>
+    </header>
+
+    <main style="display: flex">
+      <section class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+
+          <a style="color: white; text-decoration: none" href="home.html">
+            <button type="button" onclick="performLogin()">Login</button></a
+          >
+        </form>
+        <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Faculty of Engineering Ain Shams University</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
