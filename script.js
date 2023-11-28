@@ -1,4 +1,4 @@
-// Get elements by ID
+
 const paymentList = document.getElementById("paymentList");
 const paymentSelect = document.getElementById("paymentSelect");
 const creditElement = document.querySelector(".credit p");
@@ -7,41 +7,30 @@ const totalAmountElement = document.querySelector(".total-amount p");
 let credit = 800;
 let totalAmount = 900;
 
-// Function to handle payment
+
 function handlePayment() {
-    // Get the selected payment option
     const selectedPaymentOption = paymentSelect.options[paymentSelect.selectedIndex];
-  
-    // Get the payment amount from the data-amount attribute
-    const paymentAmount = parseInt(selectedPaymentOption.dataset.amount);
-  
-    // Check if credit can cover the payment
+      const paymentAmount = parseInt(selectedPaymentOption.dataset.amount);
+
     if (credit >= paymentAmount) {
-      // Deduct the payment amount from credit
       credit -= paymentAmount;
-  
-      // Update credit and total amount elements
       creditElement.textContent = `Your Credit: $${credit}`;
       totalAmount -= paymentAmount;
       totalAmountElement.textContent = `Total Required Amount: $${totalAmount}`;
-  
-      // Remove the paid payment from the list and dropdown
       const paymentId = selectedPaymentOption.value;
       removePayment(paymentId);
+
     } else {
       alert("Insufficient credit to cover the payment.");
     }
   }
   
-  // Function to remove a payment from the list and dropdown
   function removePayment(paymentId) {
-    // Remove the payment from the list
     const listItem = document.getElementById(paymentId);
     if (listItem) {
       listItem.remove();
     }
   
-    // Remove the payment from the dropdown
     const optionToRemove = Array.from(paymentSelect.options).find(option => option.value === paymentId);
     if (optionToRemove) {
       optionToRemove.remove();
@@ -56,6 +45,88 @@ function handlePayment() {
         })
     })
   })
+
+  function submitFeedback() {
+    const feedbackType = document.querySelector('input[name="feedbackType"]:checked');
+    const feedbackText = document.getElementById('feedbackText');
+
+    if (feedbackType && feedbackText.value) {
+        alert(`Feedback Type: ${feedbackType.value}\nFeedback Text: ${feedbackText.value}`);
+
+        feedbackText.value = ''; 
+        document.querySelector('input[name="feedbackType"]:checked').checked = false; 
+        document.getElementById('feedbackBox').style.display = 'none'; 
+        alert('Please choose feedback type and provide feedback text.');
+    }
+}
+
+document.querySelectorAll('input[name="feedbackType"]').forEach(function (radio) {
+    radio.addEventListener('change', function () {
+        const feedbackBox = document.getElementById('feedbackBox');
+        const feedbackText = document.getElementById('feedbackText');
+        
+        if (radio.value === 'complaint') {
+            feedbackText.placeholder = 'Type your complaint here...';
+        } else if (radio.value === 'suggestion') {
+            feedbackText.placeholder = 'Type your suggestion here...';
+        }
+
+        feedbackBox.style.display = 'block';
+    });
+});
+
+
+const users = [];
+
+
+function performSignUp() {
+  const fullName = document.getElementById('fullname').value;
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+
+  if (!fullName || !email || !password) {
+      alert('Please fill in all fields.');
+      return;
+  }
+
+  const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
+  const userExists = storedUsers.some(user => user.email === email);
+
+  if (userExists) {
+      alert('Email already exists. Please use a different email.');
+  } else {
+
+      storedUsers.push({ fullName, email, password });
+      // Store the updated array in local storage
+      localStorage.setItem('users', JSON.stringify(storedUsers));
+
+      alert('Sign up successful. You can now log in.');
+      window.location.href = 'login.html';
+  }
+}
+
+
+function performLogin() {
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+
+  // Retrieve stored users from local storage
+  const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
+
+  const user = storedUsers.find(user => user.email === email);
+
+  if (!user) {
+      alert('Email not found. Please sign up.');
+  } else if (user.password !== password) {
+      alert('Incorrect password. Please try again.');
+  } else {
+      alert(`Welcome, ${user.fullName}! You are now logged in.`);
+      window.location.href = 'home.html';
+  }
+}
+
+
+
 
 
 

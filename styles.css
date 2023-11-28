@@ -1,3 +1,9 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -107,9 +113,9 @@ button:hover {
 
 
 .logo {
-    max-width: 120px; /* Adjust the size of your logo */
+    max-width: 120px; 
     max-height: 120px;
-    margin-bottom: 10px; /* Adjust margin as needed */
+    margin-bottom: 10px;
 }
 
 
@@ -133,14 +139,17 @@ nav {
     text-decoration: none;
     color: #fff;
     transition: 0.5s;
+    margin-top: 5px;
   }
   
   nav a:hover {
     background-color: #2980b9;
+    border-radius: 8px;
   }
   
   nav .active {
     background-color: #2980b9;
+    border-radius: 8px;
   }  
 
 
@@ -148,8 +157,8 @@ nav {
 /* Main content styles */
 .main-content {
     display: flex;
-    flex-wrap: wrap; /* Allow content to wrap to the next line */
-padding-bottom: 20px;  
+    flex-wrap: wrap; 
+    padding-bottom: 20px;  
 }
   
   .text-section {
@@ -162,14 +171,9 @@ padding-bottom: 20px;
     margin-bottom: 10px;
   }
   
-  .photo-section {
+  .video-section {
     width: 40%;
-    margin-top: 20px; /* Add margin to separate from the manual photos */
-  }
-  
-  .photo-section img {
-    max-width: 100%;
-    height: auto;
+    margin-top: 20px;
   }
   
   /* Manual photos section styles */
@@ -264,7 +268,7 @@ color: black;
   margin: 20px auto;
   padding: 20px;
   background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 .total-amount, .credit, .payment-list, .payment-dropdown {
@@ -290,3 +294,30 @@ color: black;
   width: 100%;
 }
 
+.feedback-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.feedback-options {
+  margin-bottom: 20px;
+}
+
+#feedbackBox {
+  display: none;
+}
+
+textarea.full-width {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.hidden {
+    display: none;
+}
