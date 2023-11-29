@@ -19,8 +19,8 @@
     <nav>
       <ul>
         <li><a href="home.html">Home</a></li>
-        <li><a href="fees.html" class="active">Fees</a></li>
-        <li class="dropdown">
+        <li><a href="fees.html">Fees</a></li>
+        <li class="dropdown active">
           <a href="#" class="dropbtn">My Courses &#9660;</a>
           <ul class="dropdown-content">
             <li><a href="previous.html">Previous</a></li>
@@ -32,41 +32,35 @@
         <li><a href="myAccount.html">My Account</a></li>
       </ul>
     </nav>
-
     <main>
-      <section class="fees-container">
-        <h2>Fees Payment</h2>
-
-        <div class="total-amount">
-          <p>Total Required Amount: $900</p>
+      <section class="semester">
+        <h2>Fall 2023</h2>
+        <div class="subject">
+          <h3>Report Writing & Communication skills</h3>
+          <p>Credit Hours: 3</p>
         </div>
-
-        <div class="credit">
-          <p>Your Credit: $800</p>
+        <div class="subject">
+          <h3>Logic Design</h3>
+          <p>Credit Hours: 3</p>
         </div>
-
-        <div class="payment-list">
-          <h3>Payments:</h3>
-          <ul id="paymentList">
-            <li id="payment1">Payment 1: $300</li>
-            <li id="payment2">Payment 2: $400</li>
-            <li id="payment3">Payment 3: $200</li>
-          </ul>
+        <div class="subject">
+          <h3>Electrical and Electronic Circuits</h3>
+          <p>Credit Hours: 3</p>
         </div>
-
-        <div class="payment-dropdown">
-          <label for="paymentSelect">Choose Payment:</label>
-          <select id="paymentSelect">
-            <option value="payment1" data-amount="300">Payment 1: $300</option>
-            <option value="payment2" data-amount="400">Payment 2: $400</option>
-            <option value="payment3" data-amount="200">Payment 3: $200</option>
-          </select>
+        <div class="subject">
+          <h3>Computer Programming</h3>
+          <p>Credit Hours: 3</p>
         </div>
-
-        <button id="payButton" onclick="handlePayment()">Pay</button>
+        <div class="subject">
+          <h3>Properties of Electrical Materials</h3>
+          <p>Credit Hours: 2</p>
+        </div>
+        <div class="subject">
+          <h3>Differential and Partially Differential Equations</h3>
+          <p>Credit Hours: 3</p>
+        </div>
       </section>
     </main>
-
     <footer style="display: flex">
       <div class="footer-section" style="width: 30%">
         <img src="Images/asueng.jpeg" alt="Your Logo" />

@@ -50,15 +50,18 @@ function handlePayment() {
     const feedbackType = document.querySelector('input[name="feedbackType"]:checked');
     const feedbackText = document.getElementById('feedbackText');
 
-    if (feedbackType && feedbackText.value) {
+    if (feedbackType && feedbackText.value.trim() !== '') {
         alert(`Feedback Type: ${feedbackType.value}\nFeedback Text: ${feedbackText.value}`);
-
+        
+        // Clear input values and hide the feedback box
         feedbackText.value = ''; 
         document.querySelector('input[name="feedbackType"]:checked').checked = false; 
-        document.getElementById('feedbackBox').style.display = 'none'; 
-        alert('Please choose feedback type and provide feedback text.');
+        document.getElementById('feedbackBox').style.display = 'none';
+    } else {
+        alert('Please provide feedback text.');
     }
 }
+
 
 document.querySelectorAll('input[name="feedbackType"]').forEach(function (radio) {
     radio.addEventListener('change', function () {
@@ -124,6 +127,70 @@ function performLogin() {
       window.location.href = 'home.html';
   }
 }
+
+// script.js
+
+function calculateSemesterGPA(semesterId) {
+  const semester = document.getElementById(semesterId);
+  const subjects = semester.querySelectorAll('.subject');
+  let totalCreditHours = 0;
+  let totalGradePoints = 0;
+
+  subjects.forEach((subject) => {
+    const creditHours = parseInt(subject.querySelector('p:nth-child(2)').textContent.split(' ')[2]);
+    const grade = subject.querySelector('p:nth-child(3)').textContent.split(' ')[1];
+
+    let gradePoint;
+    switch (grade) {
+      case 'A':
+        gradePoint = 4.0;
+        break;
+      case 'A-':
+        gradePoint = 3.7;
+        break;
+      case 'B+':
+        gradePoint = 3.3;
+        break;
+      case 'B':
+        gradePoint = 3.0;
+        break;
+      case 'B-':
+        gradePoint = 2.7;
+        break;
+      case 'C+':
+        gradePoint = 2.3;
+        break;
+      case 'C':
+        gradePoint = 2.0;
+        break;
+      case 'C-':
+        gradePoint = 1.7;
+        break;
+      case 'D+':
+        gradePoint = 1.3;
+        break;
+      case 'D':
+        gradePoint = 1;
+        break;                                        
+      
+
+      default:
+        gradePoint = 0.0;
+    }
+
+    totalCreditHours += creditHours;
+    totalGradePoints += creditHours * gradePoint;
+  });
+
+  const semesterGPA = totalGradePoints / totalCreditHours;
+  const resultContainer = document.createElement('div');
+  resultContainer.innerHTML = `<p>Semester GPA: ${semesterGPA.toFixed(2)}</p><p>Total Credit Hours: ${totalCreditHours}</p>`;
+  semester.appendChild(resultContainer);
+}
+
+calculateSemesterGPA('semester1');
+calculateSemesterGPA('semester2');
+
 
 
 

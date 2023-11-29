@@ -20,7 +20,14 @@
       <ul>
         <li><a href="home.html">Home</a></li>
         <li><a href="fees.html">Fees</a></li>
-        <li><a href="courses.html">My Courses</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">My Courses &#9660;</a>
+          <ul class="dropdown-content">
+            <li><a href="previous.html">Previous</a></li>
+            <li><a href="current.html">Current</a></li>
+            <li><a href="courses.html">All</a></li>
+          </ul>
+        </li>
         <li><a href="C&S.html" class="active">Complains and Suggestions</a></li>
         <li><a href="myAccount.html">My Account</a></li>
       </ul>
@@ -28,23 +35,30 @@
 
     <main>
       <section class="feedback-section">
-          <h2>Choose Your Feedback Type</h2>
-          <div class="feedback-options">
-              <label>
-                  <input type="radio" name="feedbackType" value="complaint"> Complaint
-              </label>
-              <label>
-                  <input type="radio" name="feedbackType" value="suggestion"> Suggestion
-              </label>
-          </div>
+        <h2>Choose Your Feedback Type</h2>
+        <div class="feedback-options">
+          <label>
+            <input type="radio" name="feedbackType" value="complaint" />
+            Complaint
+          </label>
+          <label>
+            <input type="radio" name="feedbackType" value="suggestion" />
+            Suggestion
+          </label>
+        </div>
 
-          <div id="feedbackBox" class="hidden">
-              <label for="feedbackText">Your Feedback:</label>
-              <textarea id="feedbackText" rows="4" placeholder="Type your feedback here..." class="full-width"></textarea>
-              <button onclick="submitFeedback()">Submit</button>
-          </div>
+        <div id="feedbackBox" class="hidden">
+          <label for="feedbackText">Your Feedback:</label>
+          <textarea
+            id="feedbackText"
+            rows="4"
+            placeholder="Type your feedback here..."
+            class="full-width"
+          ></textarea>
+          <button onclick="submitFeedback()">Submit</button>
+        </div>
       </section>
-  </main>
+    </main>
 
     <footer style="display: flex">
       <div class="footer-section" style="width: 30%">
