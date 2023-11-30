@@ -4,26 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Ain Shams University - Login</title>
+    <title>My University - Login</title>
   </head>
   <body>
-    <header>
-      <img
-        src="Images/asueng.jpeg"
-        alt="Ain Shams University Logo"
-        class="logo"
-      />
-      <h1>Ain Shams University</h1>
-    </header>
-
-    <main style="display: flex">
-      <section class="login-container">
-        <h2>Login</h2>
+    <main style="display: flex; height: 100vh">
+      <section class="login-container" style="margin-top: 15px">
+        <img src="Images/uni.png" alt="My University Logo" class="logo" />
+        <h2 style="margin-top: 20px">Login</h2>
         <br />
         <form id="loginForm">
+          <br />
           <label for="email">Email:</label>
           <input type="email" id="email" name="email" required />
-
+          <br />
           <label for="password">Password:</label>
           <input type="password" id="password" name="password" required />
 
@@ -32,28 +25,6 @@
         <p>Don't have an account? <a href="signup.html">Sign up</a></p>
       </section>
     </main>
-
-    <footer style="display: flex">
-      <div class="footer-section" style="width: 30%">
-        <img src="Images/asueng.jpeg" alt="Your Logo" />
-      </div>
-      <div class="footer-section" style="width: 70%">
-        <p>Contact Us:</p>
-        <p>
-          <a href="https://maps.app.goo.gl/G8LAywdtwHQjneG97"
-            >Address: Faculty of Engineering,Ain Shams University</a
-          >
-        </p>
-        <a href="mailto:asueng@eng.asu.edu.eg">Email: asueng@eng.asu.edu.eg</a>
-        <p>Phone: +1 123-456-7890</p>
-        <a href="https://www.facebook.com/faculty.eng.asu"
-          >Facebook: Faculty of Engineering, Ain Shams University</a
-        >
-      </div>
-      <div class="centered-section">
-        <p>&copy; 2023 Faculty of Engineering Ain Shams University</p>
-      </div>
-    </footer>
 
     <script src="script.js"></script>
   </body>

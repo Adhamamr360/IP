@@ -4,16 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Ain Shams University - Login</title>
+    <title>My University - Fees</title>
   </head>
   <body>
     <header>
-      <img
-        src="Images/asueng.jpeg"
-        alt="Ain Shams University Logo"
-        class="logo"
-      />
-      <h1>Ain Shams University</h1>
+      <img src="Images/uni.png" alt="My University Logo" class="logo" />
+      <h1>Eng MyUni</h1>
     </header>
 
     <nav>
@@ -21,18 +17,22 @@
         <li><a href="home.html">Home</a></li>
         <li><a href="fees.html" class="active">Fees</a></li>
         <li class="dropdown">
-          <a href="#" class="dropbtn">My Courses &#9660;</a>
+          <a href="#" class="dropbtn">Courses &#9660;</a>
           <ul class="dropdown-content">
-            <li><a href="previous.html">Previous</a></li>
-            <li><a href="current.html">Current</a></li>
-            <li><a href="courses.html">All</a></li>
+            <li><a href="courses.html">All Courses</a></li>
+            <li class="sub-dropdown">
+              <a href="#" class="dropbtn">My Courses &#9654;</a>
+              <ul class="sub-dropdown-content">
+                <li><a href="previous.html">Previous</a></li>
+                <li><a href="current.html">Current</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
         <li><a href="C&S.html">Complains and Suggestions</a></li>
         <li><a href="myAccount.html">My Account</a></li>
       </ul>
     </nav>
-
     <main>
       <section class="fees-container">
         <h2>Fees Payment</h2>
@@ -69,7 +69,7 @@
 
     <footer style="display: flex">
       <div class="footer-section" style="width: 30%">
-        <img src="Images/asueng.jpeg" alt="Your Logo" />
+        <img src="Images/uni.png" alt="Your Logo" />
       </div>
       <div class="footer-section" style="width: 70%">
         <p>Contact Us:</p>
@@ -85,7 +85,7 @@
         >
       </div>
       <div class="centered-section">
-        <p>&copy; 2023 Faculty of Engineering Ain Shams University</p>
+        <p>&copy; 2023 Faculty of Engineering My University</p>
       </div>
     </footer>
 

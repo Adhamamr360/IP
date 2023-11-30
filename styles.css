@@ -15,6 +15,7 @@ header {
     background-color: #fff;
     text-align: center;
     padding-top: 10px;
+    margin-bottom: 10px;
 }
 
 h1 {
@@ -35,6 +36,7 @@ main {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .login-container p {
@@ -239,8 +241,8 @@ color: black;
 }
 
 footer div img{
-  max-width: 100px; /* Adjust the size of your logo */
-  max-height: 100px;
+  max-width: 120px; /* Adjust the size of your logo */
+  max-height: 120px;
 }
 
 .centered-section {
@@ -364,6 +366,37 @@ nav li {
   margin-top: 5px;
   border-radius: 8px;
 }
+
+/* ... Your existing styles ... */
+
+/* Style the sub-dropdown button */
+.sub-dropdown .dropbtn {
+  display: inline-block;
+  color: black;
+  padding: 14px 16px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+/* Style the sub-dropdown content (hidden by default) */
+.sub-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  left: 100%; /* Position it to the right of the parent dropdown */
+  top: 0;
+  border-radius: 8px;
+}
+
+/* Show the sub-dropdown menu on hover */
+.sub-dropdown:hover .sub-dropdown-content {
+  display: block;
+}
+
 
 .semester {
   border: 1px solid #ccc;
