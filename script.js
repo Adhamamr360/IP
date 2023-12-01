@@ -53,7 +53,7 @@ function handlePayment() {
     if (feedbackType && feedbackText.value.trim() !== '') {
         alert(`Feedback Type: ${feedbackType.value}\nFeedback Text: ${feedbackText.value}`);
         
-        // Clear input values and hide the feedback box
+
         feedbackText.value = ''; 
         document.querySelector('input[name="feedbackType"]:checked').checked = false; 
         document.getElementById('feedbackBox').style.display = 'none';
@@ -113,7 +113,7 @@ function performLogin() {
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
 
-  // Retrieve stored users from local storage
+
   const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
 
   const user = storedUsers.find(user => user.email === email);
@@ -128,7 +128,7 @@ function performLogin() {
   }
 }
 
-// script.js
+
 
 function calculateSemesterGPA(semesterId) {
   const semester = document.getElementById(semesterId);
@@ -191,6 +191,16 @@ function calculateSemesterGPA(semesterId) {
 calculateSemesterGPA('semester1');
 calculateSemesterGPA('semester2');
 
+
+function logout() {
+  window.location.href = 'login.html';
+}
+
+
+const logoutButton = document.getElementById('logoutButton');
+if (logoutButton) {
+  logoutButton.addEventListener('click', logout);
+}
 
 
 

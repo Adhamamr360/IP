@@ -23,6 +23,7 @@ h1 {
     margin-bottom: 2px;
 }
 
+
 main {
     justify-content: center;
     background-color: #3498db;
@@ -105,7 +106,7 @@ button {
     color: #fff;
     padding: 10px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
@@ -235,13 +236,13 @@ footer {
 .footer-section {
   box-sizing: border-box;
   padding: 10px;
-  border: 1px solid #fff; /* Add a border for separation, you can adjust or remove this */
+  border: 1px solid #fff; 
 margin-bottom: 10px;
 color: black;
 }
 
 footer div img{
-  max-width: 120px; /* Adjust the size of your logo */
+  max-width: 120px; 
   max-height: 120px;
 }
 
@@ -333,7 +334,7 @@ textarea.full-width {
   cursor: pointer;
 }
 
-/* Style the dropdown content (hidden by default) */
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -343,7 +344,7 @@ textarea.full-width {
   z-index: 1;
 }
 
-/* Style the dropdown links */
+
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
@@ -351,12 +352,12 @@ textarea.full-width {
   display: block;
 }
 
-/* Change color on hover */
+
 .dropdown-content a:hover {
   background-color: grey;
 }
 
-/* Show the dropdown menu on hover */
+
 .dropdown:hover .dropdown-content {
   display: block;
   border-radius: 8px;
@@ -367,9 +368,7 @@ nav li {
   border-radius: 8px;
 }
 
-/* ... Your existing styles ... */
 
-/* Style the sub-dropdown button */
 .sub-dropdown .dropbtn {
   display: inline-block;
   color: black;
@@ -379,7 +378,7 @@ nav li {
   cursor: pointer;
 }
 
-/* Style the sub-dropdown content (hidden by default) */
+
 .sub-dropdown-content {
   display: none;
   position: absolute;
@@ -387,12 +386,12 @@ nav li {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  left: 100%; /* Position it to the right of the parent dropdown */
+  left: 100%; 
   top: 0;
   border-radius: 8px;
 }
 
-/* Show the sub-dropdown menu on hover */
+
 .sub-dropdown:hover .sub-dropdown-content {
   display: block;
 }
@@ -409,7 +408,7 @@ nav li {
   margin-bottom: 20px;
 }
 
-/* Semester Dropdown */
+
 .semester-dropdown {
   position: relative;
   display: inline-block;
@@ -470,4 +469,12 @@ nav li {
   display: flex;
   justify-content: space-between;
   width: 100%;
+}
+
+.account-info {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
