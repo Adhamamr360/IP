@@ -157,7 +157,6 @@ nav {
 
 
 
-/* Main content styles */
 .main-content {
     display: flex;
     flex-wrap: wrap; 
@@ -179,7 +178,6 @@ nav {
     margin-top: 20px;
   }
   
-  /* Manual photos section styles */
   .manual-photos-section {
     overflow-x: hidden;
   }
@@ -265,7 +263,6 @@ footer div a:hover{
 color: black;
 }
 
-/* Fees page styles */
 .fees-container {
   max-width: 600px;
   margin: 20px auto;
@@ -325,7 +322,6 @@ textarea.full-width {
     display: none;
 }
 
-/* Style the dropdown button */
 .dropdown .dropbtn {
   display: inline-block;
   color: white;
