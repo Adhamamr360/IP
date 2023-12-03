@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>MyUni - Feedback</title>
+  </head>
+  <body>
+
+    <section class="game">
+      <label for="nameInput">Enter your name:</label>
+      <input type="text" id="nameInput" />
+      <button onclick="startGame()">Start Game</button>
+
+      <div id="display">Hello, <span id="userName"></span>!</div>
+
+      <button onclick="changeFontSize('expand')">Expand Text</button>
+      <button onclick="changeFontSize('shrink')">Shrink Text</button>
+      <button onclick="changeColor()">Change Color</button>
+      <button onclick="exitGame()" class="exit-button">Exit Game</button>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
